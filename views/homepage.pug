@@ -1,0 +1,23 @@
+doctype html
+html 
+    head 
+        title= `${title}`
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", href="/css/style.css")
+    body    
+        h1 Best Friends
+        p
+            a(href='/update-cobj') Add/Update this table
+        table(style='width:80%', border='1')
+            thead(style='background-color:#FFC0CB')
+                tr
+                    th Name 
+                    th Type 
+                    th Age
+            tbody
+                each item in data
+                    tr
+                        td #{item.properties.name}
+                        td #{item.properties.type}
+                        td #{item.properties.age}
+        
